@@ -1,8 +1,11 @@
 package com.techreturners.exercise001;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -43,7 +46,8 @@ public class Exercise001Test {
     public void checkSentenceReverse() {
         Exercise001 ex001 = new Exercise001();
         assertEquals("oof", ex001.reverse("foo"));
-        assertEquals("?siht od ot tnaw neve uoy dluow yhw", ex001.reverse("why would you even want to do this?"));
+        assertEquals("?siht od ot tnaw neve uoy dluow yhw",
+                ex001.reverse("why would you even want to do this?"));
     }
 
     @Test

@@ -1,19 +1,33 @@
 package com.techreturners.exercise004;
 
+import java.math.BigInteger;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Exercise004 {
 
+    private final LocalDateTime dateTime;
+
+    private static final Long GIGA_SECOND = BigInteger
+            .valueOf(10)
+            .pow(9)
+            .longValue();
+
     public Exercise004(LocalDate date) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        this.dateTime = date.atStartOfDay();
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        this.dateTime = dateTime;
     }
 
     public LocalDateTime getDateTime() {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        return dateTime.plusSeconds(GIGA_SECOND);
     }
+
+    public LocalDateTime getLocalDateTime() {
+        return dateTime;
+    }
+
+
 }
