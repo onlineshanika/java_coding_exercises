@@ -24,12 +24,7 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-        char[] chars = sentence.toCharArray();
-        StringBuilder reverseOrder = new StringBuilder();
-        for (int i = chars.length - 1; i >= 0; i--) {
-            reverseOrder.append(chars[i]);
-        }
-        return reverseOrder.toString();
+        return new StringBuilder(sentence).reverse().toString();
     }
 
     public int countLinuxUsers(List<User> users) {

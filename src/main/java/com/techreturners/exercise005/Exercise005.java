@@ -5,12 +5,13 @@ import java.util.List;
 
 public class Exercise005 {
 
+    private static final int ALPHABET_LETTER_COUNT = 26;
     private static final String PATTERN = "[^\\x00-\\x7F]+";
     public boolean isPangram(String input) {
-        Boolean[] alphaArray = new Boolean[26];
+        Boolean[] alphaArray = new Boolean[ALPHABET_LETTER_COUNT];
         int index = 0;
 
-        if (input == null || input.length() < 26 || containsASCIICharacters(input)) {
+        if (input == null || input.length() < ALPHABET_LETTER_COUNT || containsASCIICharacters(input)) {
             return false;
         } else {
             input = input.toUpperCase();
