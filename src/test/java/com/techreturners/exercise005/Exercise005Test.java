@@ -60,5 +60,9 @@ public class Exercise005Test {
     public void checkSentenceWithNumbersIsAPangram() {
         assertTrue(ex005.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs"));
     }
+    @Test
+    public void checkSentenceWithAsciiIsAPangram() {
+        assertTrue(ex005.isPangram("the 1 quick brown fox jumps over the 2 lazy dogs œ"));
+    }
 
 }
